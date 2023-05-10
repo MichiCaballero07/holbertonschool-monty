@@ -59,13 +59,15 @@ Michel Caballero : [LinkedIn/Michel] | [GitHub/MichiCaballero07] | [Twitter/Mich
 ## Authors: :genie_woman::genie_man::genie_woman:
 
 * ![GitHub Contributors Image](https://contrib.rocks/image?repo=anacardona0220/holbertonschool-low_level_programming)
-Ana Maria Cardona - <a href="https://github.com/anacardona0220" target="_blank"> @anacardona0220</a> :genie_woman: ![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=anacardona0220&show_icons=true)
+Ana Maria Cardona - <a href="https://github.com/anacardona0220" target="_blank"> @anacardona0220</a> :genie_woman: 
+![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=anacardona0220&show_icons=true)
 
 * ![GitHub Contributors Image](https://contrib.rocks/image?repo=SANTIAGOH22/holbertonschool-low_level_programming)
-Santiago Hinestroza - <a href="https://github.com/SANTIAGOH22" target="_blank"> @SANTIAGOH22</a> :genie_man:![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=SANTIAGOH22&show_icons=true)
-
+Santiago Hinestroza - <a href="https://github.com/SANTIAGOH22" target="_blank"> @SANTIAGOH22</a> :genie_man:
+![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=SANTIAGOH22&show_icons=true)
 
 
 * ![GitHub Contributors Image](https://contrib.rocks/image?repo=MichiCaballero07/holbertonschool-low_level_programming) 
-Michel Caballero - <a href="https://github.com/MichiCaballero07" target="_blank"> @MichiCaballero07</a> :genie_woman:![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=MichiCaballero07&show_icons=true)
+Michel Caballero - <a href="https://github.com/MichiCaballero07" target="_blank"> @MichiCaballero07</a> :genie_woman:
+![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=MichiCaballero07&show_icons=true)
 ***
