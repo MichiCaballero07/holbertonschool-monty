@@ -7,7 +7,7 @@
  * @line_number: line number of file we process
  */
 
-void check_opcode(char *op, stack_t **stack, unsigned int line_number)
+void check_opcode(char *op, stack_tt **stack, unsigned int line_number)
 {
 	int i;
 	instruction_t check_op[] = {

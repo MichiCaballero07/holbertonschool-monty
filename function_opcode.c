@@ -7,7 +7,7 @@
  *
  */
 
-void _push(stack_t **stack, unsigned int line_number)
+void _push(stack_tt **stack, unsigned int line_number)
 {
 	int data;
 	char *arg;
@@ -32,9 +32,9 @@ void _push(stack_t **stack, unsigned int line_number)
  * @line_number: line number we are executing
  */
 
-void _pall(stack_t **stack, unsigned int line_number)
+void _pall(stack_tt **stack, unsigned int line_number)
 {
-	stack_t *mover;
+	stack_tt *mover;
 
 	(void)line_number;
 
@@ -55,7 +55,7 @@ void _pall(stack_t **stack, unsigned int line_number)
  * @stack: double pointer of stack
  * @line_number: number of the line in case of error
  */
-void _pint(stack_t **stack, unsigned int line_number)
+void _pint(stack_tt **stack, unsigned int line_number)
 {
 	if (*stack == NULL)
 	{
@@ -70,7 +70,7 @@ void _pint(stack_t **stack, unsigned int line_number)
  * @stack: double pointer of stack
  * @line_number: number of the line in case of error
  */
-void _pop(stack_t **stack, unsigned int line_number)
+void _pop(stack_tt **stack, unsigned int line_number)
 {
 	if (*stack == NULL)
 	{
@@ -78,7 +78,7 @@ void _pop(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	stack_t *temp = *stack;
+	stack_tt *temp = *stack;
 	*stack = (*stack)->next;
 	free(temp);
 }

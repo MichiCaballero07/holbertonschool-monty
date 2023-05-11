@@ -22,7 +22,7 @@ typedef struct stack_s
         int n;
         struct stack_s *prev;
         struct stack_s *next;
-} stack_t;
+} stack_tt;
 
 /**
  * struct instruction_s - opcode and its function
@@ -34,24 +34,22 @@ typedef struct stack_s
 typedef struct instruction_s
 {
         char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+        void (*f)(stack_tt **stack, unsigned int line_number);
 } instruction_t;
 
-extern int error;
-int main(int argc, char **argv);
 
-void _push(stack_t **stack, unsigned int line_number);
-void _pall(stack_t **stack, unsigned int line_number);
-void _pint(stack_t **stack, unsigned int line_number);
-void _pop(stack_t **stack, unsigned int line_number);
-void _swap(stack_t **stack, unsigned int line_number);
-void _add(stack_t **stack, unsigned int line_numer);
-void _nop(stack_t **stack, unsigned int line_number);
+void _push(stack_tt **stack, unsigned int line_number);
+void _pall(stack_tt **stack, unsigned int line_number);
+void _pint(stack_tt **stack, unsigned int line_number);
+void _pop(stack_tt **stack, unsigned int line_number);
+void _swap(stack_tt **stack, unsigned int line_number);
+void _add(stack_tt **stack, unsigned int line_numer);
+void _nop(stack_tt **stack, unsigned int line_number);
 
-void check_opcode(char *op, stack_t **stack, unsigned int line_number);
-void free_all(stack_t *stack, FILE *fd);
+void check_opcode(char *op, stack_tt **stack, unsigned int line_number);
+void free_all(stack_tt *stack, FILE *fd);
 
-stack_t *add_node(stack_t **stack, int n);
+stack_tt *add_node(stack_tt **stack, int n);
 int check_digit(char *arg);
 int _isdigit(int c);
 

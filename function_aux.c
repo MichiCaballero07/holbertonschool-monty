@@ -6,9 +6,9 @@
  * @fd: pointer to file opened
  */
 
-void free_all(stack_t *stack, FILE *fd)
+void free_all(stack_tt *stack, FILE *fd)
 {
-	stack_t *tmp;
+	stack_tt *tmp;
 
 	while (stack != NULL)
 	{
@@ -26,11 +26,11 @@ void free_all(stack_t *stack, FILE *fd)
  * @n: new data to fill in new node
  * Return: pointer to new node
  */
-stack_t *add_node(stack_t **stack, int n)
+stack_tt *add_node(stack_tt **stack, int n)
 {
-	stack_t *new;
+	stack_tt *new;
 
-	new = malloc(sizeof(stack_t));
+	new = malloc(sizeof(stack_tt));
 	if (!new)
 		return (NULL);
 	new->n = n;
