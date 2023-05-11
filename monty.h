@@ -38,4 +38,19 @@ typedef struct instruction_s
 extern int error;
 int main(int argc, char **argv);
 
+void _push(stack_t **stack, unsigned int line_number);
+void _pall(stack_t **stack, unsigned int line_number);
+void _pint(stack_t **stack, unsigned int line_number);
+void _pop(stack_t **stack, unsigned int line_number);
+void _swap(stack_t **stack, unsigned int line_number);
+void _add(stack_t **stack, unsigned int line_numer);
+void _nop(stack_t **stack, unsigned int line_number);
+
+void check_opcode(char *op, stack_t **stack, unsigned int line_number);
+void free_all(stack_t *stack, FILE *fd);
+
+stack_t *add_node(stack_t **stack, int n);
+int check_digit(char *arg);
+int _isdigit(int c);
+
 #endif
