@@ -6,7 +6,6 @@
  * @argv: Argument
  * Return: EXIT_FAILURE, EXIT_SUCCESS.
  */
-
 int main(int argc, char **argv)
 {
         FILE *fd;
