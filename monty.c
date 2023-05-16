@@ -1,62 +1,47 @@
 #include "monty.h"
 
+int error = 0;
+
 /**
- * main
- * @argc: Size of argv
- * @argv: Array of arguments
- * Return: 0 on success, 1 on failure
+ * main - main monty program to handle the bytecode files
+ * @argc: argument count
+ * @argv: array of argument
+ * Return: EXIT_SUCCESS for success, EXIT_FAILURE for failure
  */
 
 int main(int argc, char **argv)
 {
-    FILE *file;
-
-    char *line = NULL;
-    size_t lenght_of_line = 0;
-    ssize_t number_of_characters_read = 0;
-
-    unsigned int line_number = 1;
-    char *command = NULL;
-
-    stack_t *stack = NULL;
+	FILE *fd;
+	stack_t *stack = NULL;
+	unsigned int line_number = 0;
+	char str[1024];
+	char *tok = NULL;
+	size_t n = 1024;
 
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	file = fopen(argv[1], "r");
 
-	if (file == NULL)
+	fd = fopen(argv[1], "r");
+	if (fd == NULL)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", argv[1]);
+		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-    number_of_characters_read = getline(&line, &lenght_of_line, file);
+	while (fgets(str, n, fd) != NULL && error != 1)
+	{
+		line_number++;
+		tok = strtok(str, "\n\t ");
+		if (tok != NULL)
+		{
+			check_opcode(tok, &stack, line_number);
+		}
+	}
+	free_all(stack, fd);
 
-    if (number_of_characters_read == -1)
-        printf("This File is empty\n");
-
-    if (line_number == 1)
-        fclose(file);
-
-    /* printf("%s\n", line); */
-
-    command = strtok(line, " \n");
-    /*
-        if (command == NULL)
-
-    */
-
-    if (strcmp(command, "push") == 0)
-    {
-        _push(&stack, line_number);
-    }
-
-    if (strcmp(command, "pall") == 0)
-    {
-        _pall(&stack, line_number);
-    }
-
+	if (error == 1)
+		exit(EXIT_FAILURE);
 	return (EXIT_SUCCESS);
 }
