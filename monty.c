@@ -43,6 +43,10 @@ int main(int argc, char **argv)
 		{
 			var = 2;
 		}
+		else if (strcmp(command, "pint") == 0)
+		{
+			var = 3;
+		}
 		else
 		{
 			var = 0;
@@ -56,6 +60,10 @@ int main(int argc, char **argv)
 
 		case 2:
 			pall(&stack, line_number);
+			break;
+
+		case 3:
+			pint(&stack, line_number);
 			break;
 		
 		default:
