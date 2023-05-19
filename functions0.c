@@ -80,6 +80,23 @@ void pint(stack_t **stack, unsigned int line_number)
 		printf("%d\n", (*stack)->n);
 }
 
+void pop(stack_t **stack, unsigned int line_number)
+{
+        if (stack == NULL || *stack == NULL)
+        {
+                dprintf(STDERR_FILENO, "L%u: can't pop, stack empty\n", line_number);
+                free(line);
+                stack_freer(*stack);
+                exit(EXIT_FAILURE);
+        }
+        stack_t *temp_node = NULL;
+
+	temp_node = *stack;
+	if (*stack != NULL)
+		(*stack)->prev = NULL;
+	free(temp_node);
+
+}
 void nop(stack_t **stack, unsigned int line_number)
 {
   (void)stack, (void)line_number;

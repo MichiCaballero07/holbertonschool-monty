@@ -47,6 +47,12 @@ int main(int argc, char **argv)
 		{
 			var = 3;
 		}
+		
+		else if (strcmp(command, "pop") == 0)
+                {
+                        var = 4;
+                }
+		
 		else
 		{
 			var = 0;
@@ -65,6 +71,10 @@ int main(int argc, char **argv)
 		case 3:
 			pint(&stack, line_number);
 			break;
+
+		case 4:
+                        pop(&stack, line_number);
+                        break;
 		
 		default:
 			dprintf(STDERR_FILENO, "L%u: unknown instruction %s\n", line_number, command);
