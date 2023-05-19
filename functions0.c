@@ -98,6 +98,24 @@ void pop(stack_t **stack, unsigned int line_number)
 	free(temp_node);
 
 }
+void swap(stack_t **stack, unsigned int line_number)
+{
+    stack_t *temp_node = NULL;
+    if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
+    {
+        dprintf(STDERR_FILENO, "L%u: can't swap, stack too short\n", line_number);
+        free(line);
+        stack_freer(*stack);
+        exit(EXIT_FAILURE);
+    }
+    temp_node = (*stack)->next;
+    (*stack)->next = temp_node->next;
+    (*stack)->prev = temp_node;
+    temp_node->next = (*stack);
+    temp_node->prev = NULL;
+    *stack = temp_node;
+}
+
 void nop(stack_t **stack, unsigned int line_number)
 {
   (void)stack, (void)line_number;
