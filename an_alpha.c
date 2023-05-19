@@ -2,7 +2,7 @@
 int an_alpha(const char *str)
 {
     unsigned int i;
-    if (str[0] == '-')
+    if (*str == '-')
         str++;
     for (i = 0; str[i] != '\0'; i++)
     {

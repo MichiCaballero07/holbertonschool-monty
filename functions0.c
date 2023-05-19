@@ -21,7 +21,7 @@ void push(stack_t **stack, unsigned int line_number)
         exit(EXIT_FAILURE);
     }
 
-    if (strcmp(number, "0") == 0)
+    if (!strcmp(number, "0") || !strcmp(number, "-0"))
         n = 0;
     else
     {
@@ -34,8 +34,6 @@ void push(stack_t **stack, unsigned int line_number)
             exit(EXIT_FAILURE);
         }
     }
-
-    /*printf("Numero fuera de la pila %d\n", n);*/
     
     stack_t *new_node = NULL;
 
@@ -59,9 +57,6 @@ void push(stack_t **stack, unsigned int line_number)
 	}
 
 	*stack = new_node;
-
-
-    /*printf("Numero dentro de la pila %d\n", (*stack)->n);*/
 
 	return;
 }
@@ -89,8 +84,3 @@ void nop(stack_t **stack, unsigned int line_number)
 {
   (void)stack, (void)line_number;
 }
-
-
-
-
-
