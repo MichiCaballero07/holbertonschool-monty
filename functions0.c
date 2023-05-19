@@ -84,7 +84,7 @@ void pop(stack_t **stack, unsigned int line_number)
 {
         if (stack == NULL || *stack == NULL)
         {
-                dprintf(STDERR_FILENO, "L%u: can't pop, stack empty\n", line_number);
+                dprintf(STDERR_FILENO, "L%u: can't pop an empty stack\n", line_number);
                 free(line);
                 stack_freer(*stack);
                 exit(EXIT_FAILURE);
@@ -92,6 +92,7 @@ void pop(stack_t **stack, unsigned int line_number)
         stack_t *temp_node = NULL;
 
 	temp_node = *stack;
+	*stack = (*stack)->next;
 	if (*stack != NULL)
 		(*stack)->prev = NULL;
 	free(temp_node);
