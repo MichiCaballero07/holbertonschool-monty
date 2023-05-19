@@ -26,7 +26,7 @@ void push(stack_t **stack, unsigned int line_number)
     else
     {
         n = atoi(number);
-        if (n == 0)
+        if (n == 0 || an_alpha(number))
         {
             dprintf(STDERR_FILENO, "L%u: usage: push integer\n", line_number);
             free(line);
