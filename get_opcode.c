@@ -7,6 +7,8 @@ void (*get_opcode(char *instruction))(stack_t **stack, unsigned int line_number)
 	instruction_t instructions[] = {
 		{"push", push},
 		{"pall", pall},
+		{"swap", swap},
+		{"add", add},
 		{"nop", nop},
 		{NULL, NULL}
 	};
