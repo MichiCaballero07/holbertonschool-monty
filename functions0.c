@@ -1,4 +1,5 @@
 #include "monty.h"
+
 /**
  * push - Adds a new node at the beginning of a stack_t list.
  * @stack: Double pointer to the first node of the list.
@@ -10,6 +11,7 @@ void push(stack_t **stack, unsigned int line_number)
 {
 	char *number = NULL;
 	int n;
+
 	number = strtok(NULL, " \r\t\n");
 	if (number == NULL)
 	{
@@ -49,18 +51,23 @@ void push(stack_t **stack, unsigned int line_number)
 	*stack = new_node;
 	return;
 }
+
 void pall(stack_t **stack, unsigned int line_number)
 {
 	(void)line_number;
+
 	stack_t *i = NULL;
+
 	if (stack == NULL)
 		return;
 	
 	if (*stack == NULL)
 		return;
+
 	for (i = *stack; i != NULL; i = i->next)
 		printf("%d\n", i->n);
 }
+
 void nop(stack_t **stack, unsigned int line_number)
 {
   (void)stack, (void)line_number;
