@@ -5,7 +5,7 @@
 
 ******
 ## Contents
-* [Index](#Contents-🧟)
+* [Contents](#Contents-🧟)
 * [Description](#description-🐸)
 * [Opcode](#opcode-🕵️)
 * [Compilation & Output](#compilation--output-🐼)
@@ -30,7 +30,7 @@ Monty 0.98 is a scripting language that is first compiled into Monty byte codes.
 ---
 ## Compilation & output :atom:
 
-~~c
+~~
 $ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
 ~~
 * Any output must be printed on **stdout**
