@@ -4,32 +4,56 @@
 
 
 ******
-## Table of Contents
-
+## Contents
+* [Index](#Contents-🧟)
+* [Description](#description-🐸)
+* [Opcode](#opcode-🕵️)
+* [Compilation & Output](#compilation--output-🐼)
+* [Files](#files-🐳)
+* [Authors](#authors-fishsticks)
 ---
 ## Description :octocat:
+Monty 0.98 is a scripting language that is first compiled into Monty byte codes. It relies on a unique stack, with specific instructions to manipulate it. The goal of this project is to create an interpreter for Monty ByteCodes files.
 ---
 ## Opcode :shipit:
+
 
 | **Command** | **Description** |
 |:-------:|:-----------|
 |  **push**   |pushes an element to the stack.|
 |  **pall**  |prints all the values on the stack, starting from the top of the stack.|
-
+|  **pint**   |Prints the value at the top of the stack, followed by a new line.|
+|  **pop**    |Removes the top element of the stack.|
+|  **swap**   |Swaps the top two elements of the stack.|
+|  **add**    |Adds the top two elements of the stack.|
+|  **nop**    |Doesn’t do anything.|
 ---
 ## Compilation & output :atom:
 
-~~~c
+~~c
 $ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
-~~~
+~~
 * Any output must be printed on **stdout**
 * Any error message must be printed on **stderr**
 ---
 ## Files :bowtie:
 
-* **README.md** : 
+* `README.md:` This file contains the information of this project
 
-* **monty.h** :
+* `monty.h:` This file contains prototypes and the project libraries
+
+* `monty.c:` This file is the main that executes the program.
+
+* `functions0.h:` This file contains the functions that structure monty.c
+
+* `get_opcode.c:` This file contains the list of the functions.
+
+* `lines_reader.c:` This file contains the functions that read the lines.
+
+* `stack_freer.c:` This file contains the functions that free the stack.
+
+* `bytecodes:` This is a folder that contains the files type .m
+
 
 ___
 
