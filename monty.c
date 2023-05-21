@@ -47,24 +47,22 @@ int main(int argc, char **argv)
 		{
 			var = 3;
 		}
-		
 		else if (strcmp(command, "pop") == 0)
-                {
-                        var = 4;
-                }
+		{
+			var = 4;
+		}
 		else if (strcmp(command, "swap") == 0)
-                {
-                        var = 5;
-                }
+		{
+			var = 5;
+		}
 		else if (strcmp(command, "add") == 0)
-                {
-                        var = 6;
-                }
+		{
+			var = 6;
+		}
 		else if (strcmp(command, "nop") == 0)
-                {
-                        var = 7;
-                }
-
+		{
+			var = 7;
+		}
 		else
 		{
 			var = 0;
@@ -85,17 +83,21 @@ int main(int argc, char **argv)
 			break;
 
 		case 4:
-                        pop(&stack, line_number);
-                        break;
+			pop(&stack, line_number);
+			break;
+
 		case 5:
-                        swap(&stack, line_number);
-                        break;
+			swap(&stack, line_number);
+			break;
+
 		case 6:
-                        add(&stack, line_number);
-                        break;
+			add(&stack, line_number);
+			break;
+
 		case 7:
-                        nop(&stack, line_number);
-                        break;	
+			nop(&stack, line_number);
+			break;
+		
 		default:
 			dprintf(STDERR_FILENO, "L%u: unknown instruction %s\n", line_number, command);
 			exit(EXIT_FAILURE);
