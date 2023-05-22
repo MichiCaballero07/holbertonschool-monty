@@ -36,38 +36,21 @@ int main(int argc, char **argv)
 		}
 		
 		if (strcmp(command, "push") == 0)
-		{
 			var = 1;
-		}
 		else if (strcmp(command, "pall") == 0)
-		{
 			var = 2;
-		}
 		else if (strcmp(command, "pint") == 0)
-		{
 			var = 3;
-		}
 		else if (strcmp(command, "pop") == 0)
-		{
 			var = 4;
-		}
 		else if (strcmp(command, "swap") == 0)
-		{
 			var = 5;
-		}
 		else if (strcmp(command, "add") == 0)
-		{
 			var = 6;
-		}
 		else if (strcmp(command, "nop") == 0)
-		{
 			var = 7;
-		}
 		else
-		{
 			var = 0;
-		}
-
 		switch (var)
 		{
 		case 1:
